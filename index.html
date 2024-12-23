@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Winter Wonderland</title>
+    <style>
+        /* General Reset */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f8ff; /* Light winter blue */
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            background: linear-gradient(to bottom, #003366, #006699);
+            color: white;
+            padding: 20px 10px;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin: 10px 0 0;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background: #003366;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Sections */
+        section {
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        section h2 {
+            color: #003366;
+            margin-bottom: 10px;
+            font-size: 1.8rem;
+        }
+
+        section p,
+        section ul {
+            margin: 10px 0;
+        }
+
+        section ul {
+            list-style: disc;
+            padding-left: 20px;
+        }
+
+        section ul li {
+            margin: 10px 0;
+        }
+
+        /* Form */
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        form label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+            color: #003366;
+        }
+
+        form input[type="text"],
+        form input[type="email"],
+        form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 1rem;
+        }
+
+        form textarea {
+            resize: vertical;
+        }
+
+        form button {
+            background-color: #006699;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        form button:hover {
+            background-color: #005580;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #003366;
+            color: white;
+            margin-top: 20px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+    <script>
+        // JavaScript for Contact Form
+        function handleSubmit(event) {
+            event.preventDefault(); // Prevent the form from refreshing the page
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            // Validate form
+            if (name && email && message) {
+                alert(`Thank you, ${name}! Your message has been sent.`);
+                document.getElementById('contact-form').reset(); // Clear the form
+            } else {
+                alert('Please fill out all fields before submitting.');
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Winter Wonderland!</h1>
+        <p>Celebrate the magic of the season with joy and warmth!</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#activities">Activities</a></li>
+            <li><a href="#fun-facts">Fun Facts</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="about">
+            <h2>About Winter</h2>
+            <p>Winter is the coldest season of the year, characterized by snowy days, cozy nights, and festive holidays. From snowball fights to sipping hot cocoa by the fire, winter brings families and friends together.</p>
+        </section>
+
+        <section id="activities">
+            <h2>Winter Activities</h2>
+            <ul>
+                <li>Build a snowman or have a snowball fight</li>
+                <li>Go ice skating or sledding</li>
+                <li>Bake holiday cookies</li>
+                <li>Decorate your home with Christmas lights</li>
+                <li>Watch holiday movies with hot chocolate</li>
+            </ul>
+        </section>
+
+        <section id="fun-facts">
+            <h2>Fun Winter Facts</h2>
+            <ul>
+                <li>Did you know that no two snowflakes are exactly alike?</li>
+                <li>The world’s largest snowflake was reportedly 15 inches wide!</li>
+                <li>Reindeers’ noses can appear red due to increased blood flow in cold weather.</li>
+                <li>Winter in the Northern Hemisphere lasts from December to February.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Have feedback or want to share your winter traditions? Reach out to us!</p>
+<form
+  action="https://formspree.io/f/mbllronv"
+  method="POST"
+>
+  <label>
+    Your email:
+    <input type="email" name="email">
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit">Send</button>
+</form>
+        </section>
+    </footer>
+</body>
+</html>
